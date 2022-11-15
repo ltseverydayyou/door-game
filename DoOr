@@ -1,0 +1,3327 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/forumsLib/main/source.lua"))()
+local Forums = Library.new("Cringe Hub | Doors")
+
+
+local preview = Forums:NewSection("Stuff")
+local preview1 = Forums:NewSection("Entites Killable")
+local preview4 = Forums:NewSection("Entites Peacful")
+local preview2 = Forums:NewSection("Troll")
+local preview3 = Forums:NewSection("Extras")
+local preview5 = Forums:NewSection("Challenge")
+local preview6 = Forums:NewSection("Credits")
+
+--shit here
+
+preview:NewButton("Screech", function()
+require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+end)
+
+preview:NewButton("Halt", function()
+require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+end)
+
+preview:NewButton("Glitch", function()
+require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+end)
+
+preview1:NewButton("A-60 | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid://11511274857", -- Can be GitHub file or rbxassetid
+    Speed = 500, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://192267375", -- Image1 url
+            Image2 = "rbxassetid://1972219024", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                4903742660, -- SoundId
+                { Volume = 5 }, -- Sound properties
+                { PlaybackSpeed = 2 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 10 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to an entity designated as A-60", "It can appear at any moment, A loud static will announce it's presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message (can be as long as you want)
+})
+
+          -- Run the created entity
+          Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Rush | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Rush", -- Custom name of your entity
+    Model = "rbxassetid://11542971592", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10483855823", -- Image1 url
+            Image2 = "rbxassetid://10483999903", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                10483790459, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to rush", "Just hide okay?", "Sorry I don't get payed enough", "So um yeah hah survive next time."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Ambush | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Ambush", -- Custom name of your entity
+    Model = "rbxassetid://11543301018", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 255, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 1,
+            },
+        },
+    },
+    CustomDialog = {"You died to Ambush", "Same thing as rush hide and unhide", "Repeat until he is gone", "Lazy to add more text so bye"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Smiley | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Smiley", -- Custom name of your entity
+    Model = "rbxassetid://11571943103", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11523327596", -- Image1 url
+            Image2 = "rbxassetid://11523327596", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 0, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Smiley", "The guy that rush was made from", "Wich i don't care at all lol", "But yeah he is the same as rush but different face", "You know the drill hide to survive blah blah"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Matcher | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Matcher", -- Custom name of your entity
+    Model = "rbxassetid://11402557910", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Matcher...", "The lights flicker upon its signal.", "If it does, hide!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview1:NewButton("Claim | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Claim", -- Custom name of your entity
+    Model = "rbxassetid://11410430605", -- Can be GitHub file or rbxassetid
+    Speed = 200, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Claim?", "Usually he doesn't want to be look at", "as now he decided to join the gang", "make sure to hide before he catches you!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Bob | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Bob", -- Custom name of your entity
+    Model = "rbxassetid://11572094965", -- Can be GitHub file or rbxassetid
+    Speed = 69, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        15, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Bob?", "Bob is the best guy", "I don't understand why he would kill you?", "Did you made him mad?", "Cuz", "When bob is mad you don't want to know what happens", ">:("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Rick Roll | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "RickRoll", -- Custom name of your entity
+    Model = "rbxassetid://11411884399", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 2,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rick Roll?", "Wow that is such of a skill issue ngl", "U must be unlucky to get rick rolled by the game lmao", "Sucks to be u lol"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Baller | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Baller", -- Custom name of your entity
+    Model = "rbxassetid://11564913618", -- Can be GitHub file or rbxassetid
+    Speed = 250, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        25, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "ok i am getting cringe", "but u still own me money", "or i will be broke", "pls :("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Rebound | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(102, 255, 250)
+game.Lighting.MainColorCorrection.Contrast = 1
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(3),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+
+local entity = Creator.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://11401769490", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 6,
+        WaitTime = 5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times.", "Till it never comes back."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview1:NewButton("mixalispantidos12 | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Mix", -- Custom name of your entity
+    Model = "rbxassetid://11410264863", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        200, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to mixalispantidos12", "When he spawns he makes some sussy sounds on his arrival", "He is kind of hard to survive as he haves chance to come back 10 times", "Make sure to hide in wardrobes or beds to survive him"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview1:NewButton("Eyes | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Eyes", -- Custom name of your entity
+    Model = "rbxassetid://10805842334", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        30, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"How in the hell did you die to eyes?", "He usually stands still and want's to be stared at", "Strange but anyways just try to dodge his attack"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview1:NewButton("Fallen | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Fallen", -- Custom name of your entity
+    Model = "rbxassetid://11418537050", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        5, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Fallen", "How did he even managed to get here?", "He is usually in Endless Doors", "Well", "Just make sure to hide"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview1:NewButton("Squidward | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Squidward", -- Custom name of your entity
+    Model = "rbxassetid://11418910332", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        10, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Squidward?", "Bro got his gaming chair whit him lmao", "Be careful he is such of a gamer", "Just make sure to hide or he will get u whit his gaming skillz"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+
+--troll shit here
+
+preview2:NewKeybind("Red Room", Enum.KeyCode.O, function()
+
+local v1 = require(game.ReplicatedStorage.ClientModules.Module_Events)
+local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
+local seconds = 1000000
+v1.tryp(workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], seconds)
+end)
+
+preview2:NewButton("Noob", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Noob", -- Custom name of your entity
+    Model = "rbxassetid://11418071329", -- Can be GitHub file or rbxassetid
+    Speed = 30, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                false, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"How did you die to this cute noob?"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("Train", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Train", -- Custom name of your entity
+    Model = "rbxassetid://11418195701", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Train?", "Dam u suck", "Kardin Hong is disappointed at you"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("Seek", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Seek", -- Custom name of your entity
+    Model = "rbxassetid://11418254328", -- Can be GitHub file or rbxassetid
+    Speed = 20, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"L"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("DaBaby", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "DaMogus", -- Custom name of your entity
+    Model = "rbxassetid://11564524684", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        30, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"Bro you must be fucking kidding me", "How in the fucking world is this even here?", "Honestly i don't get payed enought for this", "Deal whit this shit urself i quit"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("mixalispantidos12 | Rig | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Mix Rig", -- Custom name of your entity
+    Model = "rbxassetid://11418408812", -- Can be GitHub file or rbxassetid
+    Speed = 20, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 2,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"He became a rig!1!1"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("mixalispantidos12 | Rig", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Mix Rig", -- Custom name of your entity
+    Model = "rbxassetid://11418408812", -- Can be GitHub file or rbxassetid
+    Speed = 20, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 2,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        0, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"He became a rig!1!1"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("Void | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Void", -- Custom name of your entity
+    Model = "rbxassetid://11419039589", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        20, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        10, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"What?", "How did the void came to life?", "This is weird", "umm", "Good Luck on that i ain't doing anything to help you whit this"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("Void", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Void", -- Custom name of your entity
+    Model = "rbxassetid://11419039589", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        20, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        10, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"What?", "How did the void came to life?", "This is weird", "umm", "Good Luck on that i ain't doing anything to help you whit this"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("FE2 Map | can kill", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Dark-Sci Facility", -- Custom name of your entity
+    Model = "rbxassetid://11423699448", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        400, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"What?", "How did you even managed to die to a FE2 map?", "This is not possible!", "There is legit no way a map came to life trying to kill you", "Nah i quit my job goodbye"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview2:NewButton("FE2 Map", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Dark-Sci Facility", -- Custom name of your entity
+    Model = "rbxassetid://11423699448", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        400, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"What?", "How did you even managed to die to a FE2 map?", "This is not possible!", "There is legit no way a map came to life trying to kill you", "Nah i quit my job goodbye"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+
+--usefull stuff or smthing
+
+preview3:NewButton("Vynixu", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+end)
+
+preview3:NewButton("Add gun | shop only", function()
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = true
+end)
+
+preview3:NewButton("Remove gun | shop only", function()
+game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = false
+end)
+
+preview3:NewButton("Pistol", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
+end)
+
+preview3:NewButton("Delete Walls | Repeat", function()
+_G.autoTap = true
+while _G.autoTap == true do
+-- Name
+local Part = "Wall"
+
+-- Script
+local femboy = game:GetDescendants()
+for i = 1, #femboy do local v = femboy[i]
+if v.Name == Part then
+v:Destroy()
+end
+end
+wait(2)
+end
+end)
+
+preview3:NewButton("Stop Repeat", function()
+_G.autoTap = false
+while _G.autoTap == true do
+
+wait()
+end
+end)
+
+--peacful dumb bots
+
+preview4:NewButton("A-60", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid://11511274857", -- Can be GitHub file or rbxassetid
+    Speed = 500, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://192267375", -- Image1 url
+            Image2 = "rbxassetid://1972219024", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                4903742660, -- SoundId
+                { Volume = 5 }, -- Sound properties
+                { PlaybackSpeed = 2 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 10 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to an entity designated as A-60", "It can appear at any moment, A loud static will announce it's presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message (can be as long as you want)
+})
+
+          -- Run the created entity
+          Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Rush", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Rush", -- Custom name of your entity
+    Model = "rbxassetid://11542971592", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10483855823", -- Image1 url
+            Image2 = "rbxassetid://10483999903", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                10483790459, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to rush", "Just hide okay?", "Sorry I don't get payed enough", "So um yeah hah survive next time."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Ambush", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Ambush", -- Custom name of your entity
+    Model = "rbxassetid://11543301018", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 255, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 0,
+                Max = 0,
+            },
+        },
+    },
+    CustomDialog = {"You died to Ambush", "Same thing as rush hide and unhide", "Repeat until he is gone", "Lazy to add more text so bye"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Smiley", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Smiley", -- Custom name of your entity
+    Model = "rbxassetid://11571943103", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11523327596", -- Image1 url
+            Image2 = "rbxassetid://11523327596", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 0, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Smiley", "The guy that rush was made from", "Wich i don't care at all lol", "But yeah he is the same as rush but different face", "You know the drill hide to survive blah blah"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Matcher", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Matcher", -- Custom name of your entity
+    Model = "rbxassetid://11402557910", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Matcher...", "The lights flicker upon its signal.", "If it does, hide!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview4:NewButton("Claim", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Claim", -- Custom name of your entity
+    Model = "rbxassetid://11410430605", -- Can be GitHub file or rbxassetid
+    Speed = 200, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Claim?", "Usually he doesn't want to be look at", "as now he decided to join the gang", "make sure to hide before he catches you!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Bob", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Bob", -- Custom name of your entity
+    Model = "rbxassetid://11572094965", -- Can be GitHub file or rbxassetid
+    Speed = 69, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        15, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Bob?", "Bob is the best guy", "I don't understand why he would kill you?", "Did you made him mad?", "Cuz", "When bob is mad you don't want to know what happens", ">:("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Rick Roll", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "RickRoll", -- Custom name of your entity
+    Model = "rbxassetid://11411884399", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 2,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rick Roll?", "Wow that is such of a skill issue ngl", "U must be unlucky to get rick rolled by the game lmao", "Sucks to be u lol"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Baller", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Baller", -- Custom name of your entity
+    Model = "rbxassetid://11564913618", -- Can be GitHub file or rbxassetid
+    Speed = 250, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        25, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "ok i am getting cringe", "but u still own me money", "or i will be broke", "pls :("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Rebound", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(102, 255, 250)
+game.Lighting.MainColorCorrection.Contrast = 1
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(3),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+
+local entity = Creator.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://11401769490", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 6,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times.", "Till it never comes back."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview4:NewButton("mixalispantidos12", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Mix", -- Custom name of your entity
+    Model = "rbxassetid://11410264863", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        200, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to mixalispantidos12", "When he spawns he makes some sussy sounds on his arrival", "He is kind of hard to survive as he haves chance to come back 10 times", "Make sure to hide in wardrobes or beds to survive him"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+end)
+
+preview4:NewButton("Eyes", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Eyes", -- Custom name of your entity
+    Model = "rbxassetid://10805842334", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        30, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"How in the hell did you die to eyes?", "He usually stands still and want's to be stared at", "Strange but anyways just try to dodge his attack"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview4:NewButton("Fallen", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Fallen", -- Custom name of your entity
+    Model = "rbxassetid://11418537050", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        5, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Fallen", "How did he even managed to get here?", "He is usually in Endless Doors", "Well", "Just make sure to hide"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview4:NewButton("Squidward", function()
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Squidward", -- Custom name of your entity
+    Model = "rbxassetid://11418910332", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        10, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Squidward?", "Bro got his gaming chair whit him lmao", "Be careful he is such of a gamer", "Just make sure to hide or he will get u whit his gaming skillz"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+end)
+
+preview5:NewButton("Screech | every 5 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+wait(5)
+end
+end)
+
+preview5:NewButton("Halt | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+wait(20)
+end
+end)
+
+preview5:NewButton("Glitch | every 15 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
+wait(15)
+end
+end)
+
+preview5:NewButton("A-60 | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid://11511274857", -- Can be GitHub file or rbxassetid
+    Speed = 500, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://192267375", -- Image1 url
+            Image2 = "rbxassetid://1972219024", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                4903742660, -- SoundId
+                { Volume = 5 }, -- Sound properties
+                { PlaybackSpeed = 2 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 10 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to an entity designated as A-60", "It can appear at any moment, A loud static will announce it's presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message (can be as long as you want)
+})
+
+          -- Run the created entity
+          Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Rush | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Rush", -- Custom name of your entity
+    Model = "rbxassetid://11542971592", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10483855823", -- Image1 url
+            Image2 = "rbxassetid://10483999903", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                10483790459, -- SoundId
+                { Volume = 1 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 255, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to rush", "Just hide okay?", "Sorry I don't get payed enough", "So um yeah hah survive next time."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Ambush | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Ambush", -- Custom name of your entity
+    Model = "rbxassetid://11543301018", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://10110576663", -- Image1 url
+            Image2 = "rbxassetid://10110576663", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                8880765497, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                9045199073, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 255, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 0,
+                Max = 0,
+            },
+        },
+    },
+    CustomDialog = {"You died to Ambush", "Same thing as rush hide and unhide", "Repeat until he is gone", "Lazy to add more text so bye"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Smiley | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Smiley", -- Custom name of your entity
+    Model = "rbxassetid://11571943103", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 2,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11523327596", -- Image1 url
+            Image2 = "rbxassetid://11523327596", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 0.8 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(0, 0, 255), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Smiley", "The guy that rush was made from", "Wich i don't care at all lol", "But yeah he is the same as rush but different face", "You know the drill hide to survive blah blah"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+
+preview5:NewButton("Matcher | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Matcher", -- Custom name of your entity
+    Model = "rbxassetid://11402557910", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Matcher...", "The lights flicker upon its signal.", "If it does, hide!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+wait(20)
+end
+end)
+
+preview5:NewButton("Claim | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Claim", -- Custom name of your entity
+    Model = "rbxassetid://11410430605", -- Can be GitHub file or rbxassetid
+    Speed = 200, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 5,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Claim?", "Usually he doesn't want to be look at", "as now he decided to join the gang", "make sure to hide before he catches you!"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Bob | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Bob", -- Custom name of your entity
+    Model = "rbxassetid://11572094965", -- Can be GitHub file or rbxassetid
+    Speed = 69, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        15, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Bob?", "Bob is the best guy", "I don't understand why he would kill you?", "Did you made him mad?", "Cuz", "When bob is mad you don't want to know what happens", ">:("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Rick Roll | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "RickRoll", -- Custom name of your entity
+    Model = "rbxassetid://11411884399", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 0, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = false,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 2,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rick Roll?", "Wow that is such of a skill issue ngl", "U must be unlucky to get rick rolled by the game lmao", "Sucks to be u lol"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview1:NewButton("Baller | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Baller", -- Custom name of your entity
+    Model = "rbxassetid://11564913618", -- Can be GitHub file or rbxassetid
+    Speed = 250, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        25, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "ok i am getting cringe", "but u still own me money", "or i will be broke", "pls :("}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Rebound | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+
+game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(102, 255, 250)
+game.Lighting.MainColorCorrection.Contrast = 1
+local tween = game:GetService("TweenService")
+tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
+local TweenService = game:GetService("TweenService")
+local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(3),{TintColor = Color3.fromRGB(255, 255, 255)})
+TW:Play()
+
+local entity = Creator.createEntity({
+    CustomName = "Rebound", -- Custom name of your entity
+    Model = "rbxassetid://11401769490", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 3, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        2.5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 6,
+        WaitTime = 5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times.", "Till it never comes back."}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+wait(20)
+end
+end)
+
+preview5:NewButton("mixalispantidos12 | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Mix", -- Custom name of your entity
+    Model = "rbxassetid://11410264863", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        10, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1.5,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        200, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to mixalispantidos12", "When he spawns he makes some sussy sounds on his arrival", "He is kind of hard to survive as he haves chance to come back 10 times", "Make sure to hide in wardrobes or beds to survive him"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Eyes | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Eyes", -- Custom name of your entity
+    Model = "rbxassetid://10805842334", -- Can be GitHub file or rbxassetid
+    Speed = 150, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        30, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"How in the hell did you die to eyes?", "He usually stands still and want's to be stared at", "Strange but anyways just try to dodge his attack"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+wait(20)
+end
+end)
+
+preview5:NewButton("Fallen | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Fallen", -- Custom name of your entity
+    Model = "rbxassetid://11418537050", -- Can be GitHub file or rbxassetid
+    Speed = 50, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        5, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Fallen", "How did he even managed to get here?", "He is usually in Endless Doors", "Well", "Just make sure to hide"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+
+wait(20)
+end
+end)
+
+preview5:NewButton("Squidward | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Squidward", -- Custom name of your entity
+    Model = "rbxassetid://11418910332", -- Can be GitHub file or rbxassetid
+    Speed = 100, -- Percentage, 100 = default Rush speed
+    DelayTime = 1, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        1, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 0,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        10, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Squidward?", "Bro got his gaming chair whit him lmao", "Be careful he is such of a gamer", "Just make sure to hide or he will get u whit his gaming skillz"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Train | every 20 sec", function()
+_G.autoTap = true
+while _G.autoTap == true do
+local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "Train", -- Custom name of your entity
+    Model = "rbxassetid://11418195701", -- Can be GitHub file or rbxassetid
+    Speed = 300, -- Percentage, 100 = default Rush speed
+    DelayTime = 2, -- Time before starting cycles (seconds)
+    HeightOffset = 3,
+    CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        5, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 1,
+        WaitTime = 3,
+    },
+    CamShake = {
+        true, -- Enabled
+        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        false, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://11372489796", -- Image1 url
+            Image2 = "rbxassetid://11372489796", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Sound2 = {
+                0, -- SoundId
+                { Volume = 0.5 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to Train?", "Dam u suck", "Kardin Hong is disappointed at you"}, -- Custom death message (can be as long as you want)
+})
+
+-- Run the created entity
+Creator.runEntity(entity)
+wait(20)
+end
+end)
+
+preview5:NewButton("Stop Repeat", function()
+_G.autoTap = false
+while _G.autoTap == true do
+
+wait()
+end
+end)
+
+preview2:NewButton("Holy Wrench", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/M3X3mSJj", true))()
+end)
+
+preview6:NewButton("ltseverydayyou", function()
+print("Axtro is a dick")
+end)
+
+preview6:NewButton("mixalispantidos12", function()
+print("mix sus")
+end)
+
+preview6:NewButton("ChronoAccelerator", function()
+print("Stop clicking the credits dumbass")
+end)
+
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "Executed!"})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "If gui doesn't pop up, your executor is trahs! :P"})
+
+game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "Don't claim this as ur gui or script pussy"})
+
+
+
+
+
+
