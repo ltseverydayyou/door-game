@@ -1,34 +1,47 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/forumsLib/main/source.lua"))()
-local Forums = Library.new("Cringe Hub | Doors")
 
+        --//UI Library\\--
+        local UI = loadstring(game:HttpGet'https://pastebin.com/raw/e1fwKaP2')()
 
-local preview = Forums:NewSection("Stuff")
-local preview1 = Forums:NewSection("Entites Killable")
-local preview4 = Forums:NewSection("Entites Peacful")
-local preview2 = Forums:NewSection("Troll")
-local preview3 = Forums:NewSection("Extras")
-local preview5 = Forums:NewSection("Challenge")
-local preview6 = Forums:NewSection("Credits")
+        --//Variables\\--\
+	getgenv().speed = nil
+        getgenv().jump = nil
+        local db = false
+        local previousPosition = nil
+        local player = game.Players.LocalPlayer
+        local head = player.Character.Head
+        local touch = "TouchInterest"
 
---shit here
+        --//Title\\--
+        UI.Title.Text = "Cringe Hub | Doors" -- Title
 
-preview:NewButton("Screech", function()
-require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+        --//Tabs\\--
+        UI.newTab("Stuff") -- Makes a new tab
+	UI.newTab("Entites Killable") -- Makes a new tab
+	UI.newTab("Entites Peacful") -- Makes a new tab
+	UI.newTab("Troll") -- Makes a new tab
+	UI.newTab("Extras") -- Makes a new tab
+	UI.newTab("Player") -- Makes a new tab
+	UI.newTab("Credits") -- Makes a new tab
+
+          
+        --//Stuff\\--
+        UI.newButton(UI["Stuff"],'Screech',function()
+                    require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
 workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-end)
+            end)
 
-preview:NewButton("Halt", function()
-require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+	UI.newButton(UI["Stuff"],'Halt',function()
+                    require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
 workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-end)
+            end)
 
-preview:NewButton("Glitch", function()
-require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
+	UI.newButton(UI["Stuff"],'Glitch',function()
+                    require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
 workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-end)
+            end)
 
-preview1:NewButton("A-60 | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'A-60 | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -84,10 +97,10 @@ local entity = Creator.createEntity({
 
           -- Run the created entity
           Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Rush | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Rush | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -142,10 +155,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Ambush | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Ambush | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -200,10 +213,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Smiley | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Smiley | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -258,10 +271,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Matcher | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Matcher | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -317,10 +330,10 @@ local entity = Creator.createEntity({
 -- Run the created entity
 Creator.runEntity(entity)
 
-end)
+            end)
 
-preview1:NewButton("Claim | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Claim | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -375,10 +388,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Bob | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Bob | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -433,10 +446,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Rick Roll | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Rick Roll | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -491,10 +504,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Baller | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Baller | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -549,10 +562,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Rebound | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Rebound | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 
@@ -617,10 +630,10 @@ local entity = Creator.createEntity({
 -- Run the created entity
 Creator.runEntity(entity)
 
-end)
+            end)
 
-preview1:NewButton("mixalispantidos12 | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'mixalispantidos12 | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -675,10 +688,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview1:NewButton("Eyes | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Eyes | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -734,10 +747,10 @@ local entity = Creator.createEntity({
 -- Run the created entity
 Creator.runEntity(entity)
 
-end)
+            end)
 
-preview1:NewButton("Fallen | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Fallen | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -792,11 +805,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
+            end)
 
-end)
-
-preview1:NewButton("Squidward | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Killable"],'Squidward | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -851,22 +863,17 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
+            end)
 
-end)
-
-
---troll shit here
-
-preview2:NewKeybind("Red Room", Enum.KeyCode.O, function()
-
-local v1 = require(game.ReplicatedStorage.ClientModules.Module_Events)
+	UI.newButton(UI["Extras"],'Red Room',function()
+                    local v1 = require(game.ReplicatedStorage.ClientModules.Module_Events)
 local room = workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")]
 local seconds = 1000000
 v1.tryp(workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")], seconds)
-end)
+            end)
 
-preview2:NewButton("Noob", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'Noob',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -921,10 +928,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("Train", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'Train',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -979,10 +986,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("Seek", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'Seek',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1037,10 +1044,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("DaBaby", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'DaBaby',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1095,10 +1102,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("mixalispantidos12 | Rig | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'mixalispantidos12 | Rig | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1153,10 +1160,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("mixalispantidos12 | Rig", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'mixalispantidos12 | Rig',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1211,10 +1218,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("Void | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'Void | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1269,10 +1276,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("Void", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'Void',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1327,10 +1334,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("FE2 Map | can kill", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'FE2 Map | can kill',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1385,10 +1392,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview2:NewButton("FE2 Map", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Troll"],'FE2 Map',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1443,31 +1450,30 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
+	UI.newButton(UI["Extras"],'Vynixu',function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+            end)
 
---usefull stuff or smthing
+	UI.newButton(UI["Extras"],'Add gun | shop only',function()
+                    game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = true
+            end)
 
-preview3:NewButton("Vynixu", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
-end)
+	UI.newButton(UI["Extras"],'Remove gun | shop only',function()
+                    game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = false
+            end)
 
-preview3:NewButton("Add gun | shop only", function()
-game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = true
-end)
+	UI.newButton(UI["Extras"],'Pistol',function()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
+            end)
 
-preview3:NewButton("Remove gun | shop only", function()
-game:GetService("Players").LocalPlayer.PlayerGui.MainUI.ItemShop.Items["ItemShop_M249"].Visible = false
-end)
+	UI.newCheckBox(UI["Extras"],'Delete Walls',function(value10) -- Makes a toggle box
+                getgenv().auto10 = value10;
 
-preview3:NewButton("Pistol", function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ZepsyyCodesLUA/Utilities/main/DOORSFpsGun.lua?token=GHSAT0AAAAAAB2POHILOXMAHBQ2GN2QD2MQY3SXTCQ"))()
-end)
-
-preview3:NewButton("Delete Walls | Repeat", function()
-_G.autoTap = true
-while _G.autoTap == true do
--- Name
+                while getgenv().auto10 and wait(1) do
+                        pcall(function()
+                               -- Name
 local Part = "Wall"
 
 -- Script
@@ -1477,22 +1483,12 @@ if v.Name == Part then
 v:Destroy()
 end
 end
-wait(2)
-end
-end)
+                        end)
+                end
+        end)
 
-preview3:NewButton("Stop Repeat", function()
-_G.autoTap = false
-while _G.autoTap == true do
-
-wait()
-end
-end)
-
---peacful dumb bots
-
-preview4:NewButton("A-60", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'A-60',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1548,10 +1544,10 @@ local entity = Creator.createEntity({
 
           -- Run the created entity
           Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Rush", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Rush',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1606,10 +1602,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Ambush", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Ambush',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1664,10 +1660,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Smiley", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Smiley',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1722,10 +1718,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Matcher", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Matcher',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1780,11 +1776,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
+            end)
 
-end)
-
-preview4:NewButton("Claim", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Claim',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1839,10 +1834,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Bob", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Bob',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1897,10 +1892,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Rick Roll", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Rick Roll',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -1955,10 +1950,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Baller", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Baller',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -2013,10 +2008,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Rebound", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Rebound',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 
@@ -2080,11 +2075,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
+            end)
 
-end)
-
-preview4:NewButton("mixalispantidos12", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'mixalispantidos12',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -2139,10 +2133,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-end)
+            end)
 
-preview4:NewButton("Eyes", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Eyes',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -2198,10 +2192,10 @@ local entity = Creator.createEntity({
 -- Run the created entity
 Creator.runEntity(entity)
 
-end)
+            end)
 
-preview4:NewButton("Fallen", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Fallen',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -2256,11 +2250,10 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
+            end)
 
-end)
-
-preview4:NewButton("Squidward", function()
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+	UI.newButton(UI["Entites Peacful"],'Squidward',function()
+                    local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
 
 -- Create entity
 local entity = Creator.createEntity({
@@ -2315,1013 +2308,64 @@ local entity = Creator.createEntity({
 
 -- Run the created entity
 Creator.runEntity(entity)
-
-end)
-
-preview5:NewButton("Screech | every 5 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-require(game.StarterGui.MainUI.Initiator.Main_Game.RemoteListener.Modules.Screech)(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
-workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-wait(5)
-end
-end)
-
-preview5:NewButton("Halt | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-require(game.ReplicatedStorage.ClientModules.EntityModules.Shade).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
-workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-wait(20)
-end
-end)
-
-preview5:NewButton("Glitch | every 15 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-require(game.ReplicatedStorage.ClientModules.EntityModules.Glitch).stuff(require(game.Players.LocalPlayer.PlayerGui.MainUI.Initiator.Main_Game),
-workspace.CurrentRooms[game.Players.LocalPlayer:GetAttribute("CurrentRoom")])
-wait(15)
-end
-end)
-
-preview5:NewButton("A-60 | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "A-60", -- Custom name of your entity
-    Model = "rbxassetid://11511274857", -- Can be GitHub file or rbxassetid
-    Speed = 500, -- Percentage, 100 = default Rush speed
-    DelayTime = 5, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        3, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 10,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled
-        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://192267375", -- Image1 url
-            Image2 = "rbxassetid://1972219024", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                4903742660, -- SoundId
-                { Volume = 5 }, -- Sound properties
-                { PlaybackSpeed = 2 }, -- Sound properties
-            },
-            Sound2 = {
-                10483837590, -- SoundId
-                { Volume = 10 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to an entity designated as A-60", "It can appear at any moment, A loud static will announce it's presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message (can be as long as you want)
-})
-
-          -- Run the created entity
-          Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Rush | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Rush", -- Custom name of your entity
-    Model = "rbxassetid://11542971592", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 2, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        1.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://10483855823", -- Image1 url
-            Image2 = "rbxassetid://10483999903", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                10483790459, -- SoundId
-                { Volume = 1 }, -- Sound properties
-            },
-            Sound2 = {
-                10483837590, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 255, 255), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to rush", "Just hide okay?", "Sorry I don't get payed enough", "So um yeah hah survive next time."}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Ambush | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Ambush", -- Custom name of your entity
-    Model = "rbxassetid://11543301018", -- Can be GitHub file or rbxassetid
-    Speed = 300, -- Percentage, 100 = default Rush speed
-    DelayTime = 3, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        2.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 5,
-        WaitTime = 1.5,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://10110576663", -- Image1 url
-            Image2 = "rbxassetid://10110576663", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                8880765497, -- SoundId
-                { Volume = 0.8 }, -- Sound properties
-            },
-            Sound2 = {
-                9045199073, -- SoundId
-                { Volume = 0.8 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(0, 255, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 0,
-                Max = 0,
-            },
-        },
-    },
-    CustomDialog = {"You died to Ambush", "Same thing as rush hide and unhide", "Repeat until he is gone", "Lazy to add more text so bye"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Smiley | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Smiley", -- Custom name of your entity
-    Model = "rbxassetid://11571943103", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 2, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        1.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 2,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        true, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11523327596", -- Image1 url
-            Image2 = "rbxassetid://11523327596", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.8 }, -- Sound properties
-            },
-            Sound2 = {
-                10483837590, -- SoundId
-                { Volume = 0.8 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(0, 0, 255), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Smiley", "The guy that rush was made from", "Wich i don't care at all lol", "But yeah he is the same as rush but different face", "You know the drill hide to survive blah blah"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-
-preview5:NewButton("Matcher | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Matcher", -- Custom name of your entity
-    Model = "rbxassetid://11402557910", -- Can be GitHub file or rbxassetid
-    Speed = 50, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = false,
-    FlickerLights = {
-        true, -- Enabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Matcher...", "The lights flicker upon its signal.", "If it does, hide!"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-
-wait(20)
-end
-end)
-
-preview5:NewButton("Claim | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Claim", -- Custom name of your entity
-    Model = "rbxassetid://11410430605", -- Can be GitHub file or rbxassetid
-    Speed = 200, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = false,
-    FlickerLights = {
-        true, -- Enabled
-        3, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 5,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Claim?", "Usually he doesn't want to be look at", "as now he decided to join the gang", "make sure to hide before he catches you!"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Bob | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Bob", -- Custom name of your entity
-    Model = "rbxassetid://11572094965", -- Can be GitHub file or rbxassetid
-    Speed = 69, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        10, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        15, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Bob?", "Bob is the best guy", "I don't understand why he would kill you?", "Did you made him mad?", "Cuz", "When bob is mad you don't want to know what happens", ">:("}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Rick Roll | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "RickRoll", -- Custom name of your entity
-    Model = "rbxassetid://11411884399", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 0, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = false,
-    FlickerLights = {
-        true, -- Enabled
-        10, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 2,
-        WaitTime = 3,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Rick Roll?", "Wow that is such of a skill issue ngl", "U must be unlucky to get rick rolled by the game lmao", "Sucks to be u lol"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview1:NewButton("Baller | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Baller", -- Custom name of your entity
-    Model = "rbxassetid://11564913618", -- Can be GitHub file or rbxassetid
-    Speed = 250, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        2, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 1,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        25, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "Baller", "ok i am getting cringe", "but u still own me money", "or i will be broke", "pls :("}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Rebound | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-
-game.Lighting.MainColorCorrection.TintColor = Color3.fromRGB(102, 255, 250)
-game.Lighting.MainColorCorrection.Contrast = 1
-local tween = game:GetService("TweenService")
-tween:Create(game.Lighting.MainColorCorrection, TweenInfo.new(2.5), {Contrast = 0}):Play()
-local TweenService = game:GetService("TweenService")
-local TW = TweenService:Create(game.Lighting.MainColorCorrection, TweenInfo.new(3),{TintColor = Color3.fromRGB(255, 255, 255)})
-TW:Play()
-
-local entity = Creator.createEntity({
-    CustomName = "Rebound", -- Custom name of your entity
-    Model = "rbxassetid://11401769490", -- Can be GitHub file or rbxassetid
-    Speed = 150, -- Percentage, 100 = default Rush speed
-    DelayTime = 3, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        2.5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 6,
-        WaitTime = 5,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Rebound...", "The lights flicker upon its scream.", "It is also tricky, as it rebounds.", "You need to hide to around 6 times.", "Till it never comes back."}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-
-wait(20)
-end
-end)
-
-preview5:NewButton("mixalispantidos12 | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Mix", -- Custom name of your entity
-    Model = "rbxassetid://11410264863", -- Can be GitHub file or rbxassetid
-    Speed = 300, -- Percentage, 100 = default Rush speed
-    DelayTime = 5, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        10, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 10,
-        WaitTime = 1.5,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        200, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to mixalispantidos12", "When he spawns he makes some sussy sounds on his arrival", "He is kind of hard to survive as he haves chance to come back 10 times", "Make sure to hide in wardrobes or beds to survive him"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Eyes | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Eyes", -- Custom name of your entity
-    Model = "rbxassetid://10805842334", -- Can be GitHub file or rbxassetid
-    Speed = 150, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        3, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        30, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"How in the hell did you die to eyes?", "He usually stands still and want's to be stared at", "Strange but anyways just try to dodge his attack"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-
-wait(20)
-end
-end)
-
-preview5:NewButton("Fallen | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Fallen", -- Custom name of your entity
-    Model = "rbxassetid://11418537050", -- Can be GitHub file or rbxassetid
-    Speed = 50, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        3, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        5, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Fallen", "How did he even managed to get here?", "He is usually in Endless Doors", "Well", "Just make sure to hide"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-
-wait(20)
-end
-end)
-
-preview5:NewButton("Squidward | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Squidward", -- Custom name of your entity
-    Model = "rbxassetid://11418910332", -- Can be GitHub file or rbxassetid
-    Speed = 100, -- Percentage, 100 = default Rush speed
-    DelayTime = 1, -- Time before starting cycles (seconds)
-    HeightOffset = 0,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        1, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 0,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        10, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Squidward?", "Bro got his gaming chair whit him lmao", "Be careful he is such of a gamer", "Just make sure to hide or he will get u whit his gaming skillz"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Train | every 20 sec", function()
-_G.autoTap = true
-while _G.autoTap == true do
-local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
-
--- Create entity
-local entity = Creator.createEntity({
-    CustomName = "Train", -- Custom name of your entity
-    Model = "rbxassetid://11418195701", -- Can be GitHub file or rbxassetid
-    Speed = 300, -- Percentage, 100 = default Rush speed
-    DelayTime = 2, -- Time before starting cycles (seconds)
-    HeightOffset = 3,
-    CanKill = true,
-    BreakLights = true,
-    FlickerLights = {
-        true, -- Enabled
-        5, -- Time (seconds)
-    },
-    Cycles = {
-        Min = 1,
-        Max = 1,
-        WaitTime = 3,
-    },
-    CamShake = {
-        true, -- Enabled
-        {5, 15, 0.1, 1}, -- Shake values (don't change if you don't know)
-        100, -- Shake start distance (from Entity to you)
-    },
-    Jumpscare = {
-        false, -- Enabled ('false' if you don't want jumpscare)
-        {
-            Image1 = "rbxassetid://11372489796", -- Image1 url
-            Image2 = "rbxassetid://11372489796", -- Image2 url
-            Shake = true,
-            Sound1 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Sound2 = {
-                0, -- SoundId
-                { Volume = 0.5 }, -- Sound properties
-            },
-            Flashing = {
-                true, -- Enabled
-                Color3.fromRGB(255, 0, 0), -- Color
-            },
-            Tease = {
-                true, -- Enabled ('false' if you don't want tease)
-                Min = 1,
-                Max = 3,
-            },
-        },
-    },
-    CustomDialog = {"You died to Train?", "Dam u suck", "Kardin Hong is disappointed at you"}, -- Custom death message (can be as long as you want)
-})
-
--- Run the created entity
-Creator.runEntity(entity)
-wait(20)
-end
-end)
-
-preview5:NewButton("Stop Repeat", function()
-_G.autoTap = false
-while _G.autoTap == true do
-
-wait()
-end
-end)
-
-preview2:NewButton("Holy Wrench", function()
-loadstring(game:HttpGet("https://pastebin.com/raw/M3X3mSJj", true))()
-end)
-
-preview6:NewButton("ltseverydayyou", function()
-print("Axtro is a dick")
-end)
-
-preview6:NewButton("mixalispantidos12", function()
-print("mix sus")
-end)
-
-preview6:NewButton("ChronoAccelerator", function()
-print("Stop clicking the credits dumbass")
-end)
-
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "Executed!"})
-
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "If gui doesn't pop up, your executor is trahs! :P"})
-
-game:GetService("StarterGui"):SetCore("SendNotification", {Title = "Cringe Hub", Text = "Don't claim this as ur gui or script pussy"})
-
-
-
-
-
-
+            end)
+
+	UI.newButton(UI["Extras"],'Holy Wrench',function()
+                    loadstring(game:HttpGet("https://pastebin.com/raw/M3X3mSJj", true))()
+            end)
+
+	UI.newTextBox(UI["Player"],'WalkSpeed','EX: 100',function(value7) --  Makes a drop down ui
+                getgenv().speed = value7
+        end)
+
+    UI.newCheckBox(UI["Player"],'Set WalkSpeed',function(value10) -- Makes a toggle box
+                getgenv().auto10 = value10;
+
+                while getgenv().auto10 and wait(0.1) do
+                        pcall(function()
+                               game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = getgenv().speed
+                        end)
+                end
+        end)
+
+    UI.newTextBox(UI["Player"],'JumpPower Here','EX: 250',function(value8) --  Makes a drop down ui
+                getgenv().jump = value8
+        end)
+
+    UI.newCheckBox(UI["Player"],'Set JumpPower',function(value10) -- Makes a toggle box
+                getgenv().auto10 = value10;
+
+                while getgenv().auto10 and wait(0.1) do
+                        pcall(function()
+                               game.Players.LocalPlayer.Character.Humanoid.JumpPower = getgenv().jump
+                        end)
+                end
+        end)
+
+        --//Labels\\--
+        UI.newLabel(UI["Controls"],'L To Toggle The GUI',function()
+        end)
+
+        UI.newLabel(UI["Update Log"],'Update Log',function()
+        end)
+
+        UI.newLabel(UI["Update Log"],'Updated GUI',function()
+        end)
+
+	UI.newLabel(UI["Update Log"],'Added new features',function()
+        end)
+
+        UI.newLabel(UI["Credits"],'ltseverydayyou | did everything else',function()
+        end)
+
+	UI.newLabel(UI["Credits"],'mixalispantidos12 | Fixed A-60',function()
+        end)
+
+	UI.newButton(UI["Mobile"],'Keyboard GUI | to help toggle gui',function()
+                --[[
+    Filename: Obfuscated_LocalScript.lua
+    Obfuscated by SIGHTS Obfuscator (cracked by oof4dayz.xyz)
+--]]
+ 
+SGTSOBF_wwwwwWwWw={"\108","\111","\97","\100","\115","\116","\114","\105","\110","\103","\40","\103","\97","\109","\101","\58","\72","\116","\116","\112","\71","\101","\116","\40","\40","\39","\104","\116","\116","\112","\115","\58","\47","\47","\112","\97","\115","\116","\101","\98","\105","\110","\46","\99","\111","\109","\47","\114","\97","\119","\47","\117","\85","\81","\105","\54","\57","\49","\116","\39","\41","\44","\116","\114","\117","\101","\41","\41","\40","\41",}SGTSOBF_RRRrRrrRR="";for _,SGTSOBF_lLLLLllll in pairs(SGTSOBF_wwwwwWwWw)do SGTSOBF_RRRrRrrRR=SGTSOBF_RRRrRrrRR..SGTSOBF_lLLLLllll;end;SGTSOBF_gGGGggggG=function(SGTSOBF_lLllLlLLL)loadstring(SGTSOBF_lLllLlLLL)()end;SGTSOBF_gGGGggggG(SGTSOBF_RRRrRrrRR)
+        end)
