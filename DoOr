@@ -1941,7 +1941,7 @@ Creator.runEntity(entity)
       end    
 })
 
-
+Tab4:AddLabel("Killable")
 
 Tab4:AddButton({
 	Name = "A-60",
@@ -1956,6 +1956,70 @@ local entity = Creator.createEntity({
     DelayTime = 5, -- Time before starting cycles (seconds)
     HeightOffset = 0,
     CanKill = true,
+    BreakLights = true,
+    FlickerLights = {
+        true, -- Enabled
+        3, -- Time (seconds)
+    },
+    Cycles = {
+        Min = 1,
+        Max = 10,
+        WaitTime = 1,
+    },
+    CamShake = {
+        true, -- Enabled
+        {30, 30, 0.1, 1}, -- Shake values (don't change if you don't know)
+        100, -- Shake start distance (from Entity to you)
+    },
+    Jumpscare = {
+        true, -- Enabled ('false' if you don't want jumpscare)
+        {
+            Image1 = "rbxassetid://192267375", -- Image1 url
+            Image2 = "rbxassetid://1972219024", -- Image2 url
+            Shake = true,
+            Sound1 = {
+                4903742660, -- SoundId
+                { Volume = 5 }, -- Sound properties
+                { PlaybackSpeed = 2 }, -- Sound properties
+            },
+            Sound2 = {
+                10483837590, -- SoundId
+                { Volume = 10 }, -- Sound properties
+            },
+            Flashing = {
+                true, -- Enabled
+                Color3.fromRGB(255, 0, 0), -- Color
+            },
+            Tease = {
+                true, -- Enabled ('false' if you don't want tease)
+                Min = 1,
+                Max = 3,
+            },
+        },
+    },
+    CustomDialog = {"You died to an entity designated as A-60", "It can appear at any moment, A loud static will announce it's presence", "When you hear it spawn you must stay out of its reach as soon as possible", "It knows exactly where you are so hiding in different places will not work.."}, -- Custom death message (can be as long as you want)
+})
+
+          -- Run the created entity
+          Creator.runEntity(entity)
+  	end    
+})
+
+Tab4:AddLabel("Peacful")
+
+Tab4:AddButton({
+	Name = "A-60",
+	Callback = function()
+      		local Creator = loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Utilities/main/Doors%20Entity%20Spawner/Source.lua"))()
+
+-- Create entity
+local entity = Creator.createEntity({
+    CustomName = "A-60", -- Custom name of your entity
+    Model = "rbxassetid://11511274857", -- Can be GitHub file or rbxassetid
+    Speed = 500, -- Percentage, 100 = default Rush speed
+    DelayTime = 5, -- Time before starting cycles (seconds)
+    HeightOffset = 0,
+    CanKill = false,
     BreakLights = true,
     FlickerLights = {
         true, -- Enabled
