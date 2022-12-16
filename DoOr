@@ -2831,7 +2831,7 @@ OrionLib:MakeNotification({
 
 OrionLib:MakeNotification({
 	Name = "Notice",
-	Content = "If you notice any bugs report to Cringe#0438",
+	Content = "If you notice any bugs report it to Cringe#0438",
 	Image = "rbxassetid://11151804223",
 	Time = 5
 })
