@@ -2824,7 +2824,7 @@ Tab7:AddLabel("UI still in beta if there is any bugs report it to me lol")
 
 OrionLib:MakeNotification({
 	Name = "Hello",
-	Content = "UI still in beta bugs may be expected",
+	Content = "UI still in beta",
 	Image = "rbxassetid://11151804223",
 	Time = 5
 })
